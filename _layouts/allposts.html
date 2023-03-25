@@ -5,37 +5,44 @@
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
   -->
 <html>
+	{% include head.html %}
 
-  {% include head.html %}
+	<body>
+		{% include header.html %}
 
-  <body>
-
-    {% include header.html %} 
-    
-    
-    <!-- Main -->
-    <div id="main" class="alt">
-
-      <!-- One -->
-      <section id="one">
-	<div class="inner">
-          {% for post in site.posts %}
-	  {% if post.title != 404 %}
-	  <header class="major">
-	    <h1>{{ post.title }}</h1>
-	  </header>
-	  {% if post.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ post.image }}" alt="" /></span>{% endif %}
-	  {% if post.date %}<p>{{ post.date }}</p>{% endif %}
-	  <p>{{ post.content }}</p>
-	  {% endif %}
+		<!-- Main -->
+		<div id="main" class="alt">
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					{% for post in site.posts %} 
+          {% if post.title != 404 %}
+          <div class="card mb-3" style="padding: 0;margin-bottom: 10px;">
+            <div class="row no-gutters" style="margin: -1px;">
+                {% if post.image %}
+                <div class="col-md-4">
+                  <!-- <span class="image main"> -->
+                    <img style="width: 100%;height: calc(100% + 2px);" src="{{ site.baseurl }}/{{ post.image }}" alt="" />
+                  <!-- </span> -->
+                </div>
+                {% endif %}
+                <div class="col-md-8">
+                  <div class="card-body" style="color: black;">
+                  <h5 class="card-title" style="color: black;">{{ post.title }}</h5>
+                  {% if post.description %}
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  {% endif %}
+                  <p class="card-text"><small class="text-muted">{{ post.date }}</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+					{% endif %} 
           {% endfor %}
-	</div>
-      </section>
+				</div>
+			</section>
+		</div>
 
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+		{% include footer.html %}
+	</body>
 </html>

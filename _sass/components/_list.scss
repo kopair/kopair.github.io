@@ -68,7 +68,7 @@
 
 			li {
 				display: inline-block;
-				padding: 0 (_size(element-margin) * 0.5) 0 0;
+				padding: 0 calc(_size(element-margin) * 0.5) 0 0;
 				vertical-align: middle;
 
 				&:last-child {
@@ -78,14 +78,14 @@
 
 			&.small {
 				li {
-					padding: 0 (_size(element-margin) * 0.5) 0 0;
+					padding: 0 calc(_size(element-margin) * 0.5) 0 0;
 				}
 			}
 
 			&.vertical {
 				li {
 					display: block;
-					padding: (_size(element-margin) * 0.5) 0 0 0;
+					padding: calc(_size(element-margin) * 0.5) 0 0 0;
 
 					&:first-child {
 						padding-top: 0;
@@ -107,14 +107,14 @@
 
 			&.fit {
 				display: table;
-				margin-left: (_size(element-margin) * -0.5);
+				margin-left: calc(_size(element-margin) * -0.5);
 				padding: 0;
 				table-layout: fixed;
-				width: calc(100% + #{(_size(element-margin) * 0.5)});
+				width: calc(100% + #{calc(_size(element-margin) * 0.5)});
 
 				li {
 					display: table-cell;
-					padding: 0 0 0 (_size(element-margin) * 0.5);
+					padding: 0 0 0 calc(_size(element-margin) * 0.5);
 
 					> * {
 						margin-bottom: 0;
@@ -122,11 +122,11 @@
 				}
 
 				&.small {
-					margin-left: (_size(element-margin) * -0.5);
-					width: calc(100% + #{(_size(element-margin) * 0.5)});
+					margin-left: calc(_size(element-margin) * -0.5);
+					width: calc(100% + #{calc(_size(element-margin) * 0.5)});
 
 					li {
-						padding: 0 0 0 (_size(element-margin) * 0.5);
+						padding: 0 0 0 calc(_size(element-margin) * 0.5);
 					}
 				}
 			}
@@ -139,7 +139,7 @@
 		dt {
 			display: block;
 			font-weight: _font(weight-bold);
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
+			margin: 0 0 calc(_size(element-margin) * 0.5) 0;
 		}
 
 		dd {

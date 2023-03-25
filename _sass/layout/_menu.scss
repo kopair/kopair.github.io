@@ -50,12 +50,12 @@
 			}
 
 			> :last-child {
-				margin-bottom: (_size(element-margin) * 1.5);
+				margin-bottom: calc(_size(element-margin) * 1.5);
 			}
 		}
 
 		ul {
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
+			margin: 0 0 calc(_size(element-margin) * 0.5) 0;
 
 			&.links {
 				list-style: none;
